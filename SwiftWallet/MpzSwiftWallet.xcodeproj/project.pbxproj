@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7BEFDF622DFC8ED7007AAE5D /* Multipaz in Frameworks */ = {isa = PBXBuildFile; productRef = 7BEFDF612DFC8ED7007AAE5D /* Multipaz */; };
+		B074D31E2F1C3744002E0ED6 /* SwiftCBOR in Frameworks */ = {isa = PBXBuildFile; productRef = B074D31D2F1C3744002E0ED6 /* SwiftCBOR */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B074D31E2F1C3744002E0ED6 /* SwiftCBOR in Frameworks */,
 				7BEFDF622DFC8ED7007AAE5D /* Multipaz in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +134,7 @@
 			name = MpzSwiftWallet;
 			packageProductDependencies = (
 				7BEFDF612DFC8ED7007AAE5D /* Multipaz */,
+				B074D31D2F1C3744002E0ED6 /* SwiftCBOR */,
 			);
 			productName = MpzSwiftWallet;
 			productReference = 7B0028F52DFB17B7007ADB13 /* MpzSwiftWallet.app */;
@@ -217,6 +220,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				7BEFDF602DFC8ED7007AAE5D /* XCRemoteSwiftPackageReference "multipaz" */,
+				B074D31C2F1C3744002E0ED6 /* XCRemoteSwiftPackageReference "SwiftCBOR" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7B0028F62DFB17B7007ADB13 /* Products */;
@@ -589,6 +593,14 @@
 				version = 0.95.0;
 			};
 		};
+		B074D31C2F1C3744002E0ED6 /* XCRemoteSwiftPackageReference "SwiftCBOR" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/niscy-eudiw/SwiftCBOR";
+			requirement = {
+				kind = exactVersion;
+				version = 0.6.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -596,6 +608,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7BEFDF602DFC8ED7007AAE5D /* XCRemoteSwiftPackageReference "multipaz" */;
 			productName = Multipaz;
+		};
+		B074D31D2F1C3744002E0ED6 /* SwiftCBOR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B074D31C2F1C3744002E0ED6 /* XCRemoteSwiftPackageReference "SwiftCBOR" */;
+			productName = SwiftCBOR;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

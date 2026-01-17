@@ -24,6 +24,9 @@ extension ZkSystemRepository {
             let bs = circuitBytes.toByteString()
             lf.addCircuit(circuitFilename: name, circuitBytes: bs)
         }
+        // test generate proof
+        // let zkSystemSpec = lf.systemSpecs.first!; let docBs = Data(MdocTestData.getMdocBytes()).toByteString(); let stBs = Data(MdocTestData.getTranscript()).toByteString()
+        // let zkDoc = lf.generateProof(zkSystemSpec: zkSystemSpec, encodedDocument: docBs, encodedSessionTranscript: stBs, timestamp: Date.now.toKotlinInstant().truncateToWholeSeconds())
         return res.add(zkSystem: lf)
     }
 }

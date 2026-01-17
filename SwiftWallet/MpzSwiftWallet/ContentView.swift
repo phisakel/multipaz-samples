@@ -17,7 +17,7 @@ struct WalletData {
     let readerTrustManager: TrustManagerLocal
     let presentmentModel = PresentmentModel()
     // philip
-    let zkSystemRepository = try? ZkSystemRepository.enumerateLongfellowCircuits()
+    let zkSystemRepository: ZkSystemRepository?
     
     init() async {
         storage = Platform.shared.nonBackedUpStorage
@@ -27,6 +27,7 @@ struct WalletData {
             .build()
         documentTypeRepository = DocumentTypeRepository()
         documentTypeRepository.addDocumentType(documentType: DrivingLicense.shared.getDocumentType())
+        do { zkSystemRepository = try ZkSystemRepository.enumerateLongfellowCircuits() } catch { print(error);  zkSystemRepository = nil }
         documentStore = DocumentStore.Builder(
             storage: storage,
             secureAreaRepository: secureAreaRepository
