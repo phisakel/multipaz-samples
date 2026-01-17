@@ -15,8 +15,9 @@ struct WalletData {
     let documentTypeRepository: DocumentTypeRepository
     let documentStore: DocumentStore
     let readerTrustManager: TrustManagerLocal
-
     let presentmentModel = PresentmentModel()
+    // philip
+    let zkSystemRepository = try? ZkSystemRepository.enumerateLongfellowCircuits()
     
     init() async {
         storage = Platform.shared.nonBackedUpStorage
@@ -268,7 +269,7 @@ struct ContentView: View {
             documentStore: walletData!.documentStore,
             documentTypeRepository: walletData!.documentTypeRepository,
             readerTrustManager: walletData!.readerTrustManager,
-            zkSystemRepository: nil,
+            zkSystemRepository: walletData!.zkSystemRepository,
             skipConsentPrompt: false,
             dynamicMetadataResolver: { requester in
                 nil
